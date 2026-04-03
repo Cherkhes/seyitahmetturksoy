@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeler | Seyit Ahmet Türksoy</title>
+  <meta name="description" content="Seyit Ahmet Türksoy'un mekatronik, batarya ve robotik projeleri." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Video Background -->
+  <div class="video-bg" aria-hidden="true">
+    <video id="bgVideo" autoplay muted playsinline preload="auto">
+      <source src="assets/factory-bg.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- Animated Background -->
+  <div class="bg-canvas" aria-hidden="true"></div>
+  <div class="particles" aria-hidden="true">
+    <span class="particle"></span><span class="particle"></span>
+    <span class="particle"></span><span class="particle"></span>
+    <span class="particle"></span><span class="particle"></span>
+    <span class="particle"></span><span class="particle"></span>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <nav class="container nav">
+      <a href="index.html#home" class="logo" aria-label="Ana sayfa">TÜRKSOY</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç/kapat">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">Hakkımda</a></li>
+        <li><a href="index.html#experience">Deneyim</a></li>
+        <li><a href="projects.html" class="active">Projeler</a></li>
+        <li><a href="index.html#skills">Yetenekler</a></li>
+        <li><a href="index.html#education">Eğitim</a></li>
+        <li><a href="index.html#contact">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-header" data-reveal>
+        <h1>Projeler</h1>
+      </div>
+      <p data-reveal>Aşağıda projelerimin detaylı açıklamaları ve temsilci görselleri bulunuyor.</p>
+    </section>
+
+    <section class="section projects-grid">
+      <!-- Teknofest -->
+      <article class="project-item" data-reveal>
+        <div class="project-image-wrapper">
+          <img class="project-image" src="assets/vehicle.png" alt="Teknofest robotik proje görseli" />
+        </div>
+        <div class="project-body">
+          <h3>Teknofest İnsanlık Yararına Teknoloji</h3>
+          <p>
+            <strong>Mekanik Tasarım:</strong> Aracın şasi, gövde ve güç aktarım
+            sistemlerini özgün tasarımlarla optimize ettim. Tork kaybını minimize
+            eden Hub motor entegrasyonu ve arazi şartlarına uyumlu değiştirilebilir
+            paletli yürüyen aksam geliştirdim.<br /><br />
+            <strong>Süspansiyon Sistemleri:</strong> Dinamik zemin koşulları için
+            aktif ve pasif sönümleme sağlayan "Four-bar" mekanizmalı süspansiyon
+            sistemini tasarladım ve simüle ettim.<br /><br />
+            <strong>Otonom Sistemler:</strong> Nvidia Jetson Xavier NX üzerinde
+            termal ve optik kamera verilerini kullanarak nesne tespiti ve görüntü
+            işleme algoritmaları üzerine çalışmalar yürüttüm.
+          </p>
+        </div>
+      </article>
+
+      <!-- Batarya -->
+      <article class="project-item" data-reveal>
+        <div class="project-image-wrapper">
+          <img class="project-image" src="assets/battery.png" alt="Li-ion batarya paketi görseli" />
+        </div>
+        <div class="project-body">
+          <h3>Kompozit Batarya Paketi Tasarımı</h3>
+          <p>
+            20S4P konfigürasyona sahip Molicel INR-21700-P45B Li-ion hücrelerden oluşan batarya paketini yeniden
+            tasarladım. Alüminyum yapı yerine karbon fiber ve fiberglas hibrit kompozit yapı geliştirdim. Tasarımı FSAE
+            2026 kural kitabına uygun şekilde optimize edildi.
+          </p>
+        </div>
+      </article>
+
+      <!-- TSAC Hand Cart -->
+      <article class="project-item" data-reveal>
+        <div class="project-image-wrapper">
+          <img class="project-image" src="assets/tsac-handcart.png" alt="Batarya taşıma ünitesi görseli" />
+        </div>
+        <div class="project-body">
+          <h3>TSAC Hand Cart Tasarımı</h3>
+          <p>
+            FSAE yarış kuralları gereği, batarya paketinin pist dışında güvenli bir şekilde şarj edilmesi ve taşınması
+            için özel bir ünite tasarladım. 40x40 sigma profil kullanarak modüler bir şasi oluşturdum ve olası bir
+            termal kaçak durumuna karşı 1.6mm firewall ile kullanıcı güvenliğini sağladım. Özellikle regülasyonlarda
+            kritik öneme sahip olan aktif frenleme (fail-safe) sistemini tasarlayarak, operatör kontrolü bıraktığı anda
+            aracın güvenli bir şekilde durmasını garanti altına aldım.
+          </p>
+        </div>
+      </article>
+
+      <!-- Mobil Robot -->
+      <article class="project-item" data-reveal>
+        <div class="project-image-wrapper">
+          <img class="project-image"
+            src="https://images.unsplash.com/photo-1561144257-e32e8efc6c4f?auto=format&fit=crop&w=800&q=80"
+            alt="Mobil robot görseli" />
+        </div>
+        <div class="project-body">
+          <h3>Engelden Kaçan ve Labirent Çözen Mobil Robot</h3>
+          <p>
+            <strong>Mekanik &amp; Tasarım:</strong> Robotun mekanik tasarımını ve gövde üretimini gerçekleştirdim.
+            <br /><br />
+            <strong>Donanım &amp; Montaj:</strong> ESP32 ve Arduino mikrodenetleyicileri arasında haberleşme sağlayarak
+            elektronik devre kartı ve bileşen montajını tamamladım.
+            <br /><br />
+            <strong>Otonom Sürüş:</strong> Ultrasonik sensörler kullanarak otonom engelden kaçma ve labirentten çıkma
+            algoritmaları geliştirdim.
+            <br /><br />
+            <strong>Uzaktan Kontrol:</strong> Giyilebilir bir eldiven üzerinden ivmeölçer (MPU6050 vb.) verilerini
+            işleyerek, robotun el hareketleriyle (Gravity Control) uzaktan kontrol edilmesini sağlayan sistem
+            tasarladım.
+          </p>
+        </div>
+      </article>
+
+      <!-- Döner Eklem -->
+      <article class="project-item" data-reveal>
+        <div class="project-image-wrapper">
+          <img class="project-image" src="assets/revolute_joint.png" alt="Mekanik eklem tasarım görseli" />
+        </div>
+        <div class="project-body">
+          <h3>Döner Eklem (Revolute Joint) Tasarımı ve Kontrolü</h3>
+          <p>
+            <strong>Mekanizma Tasarımı:</strong> NEMA 17 step motor tahrikli
+            iki uzuvlu mekanizmayı SOLIDWORKS kullanarak tasarladım ve 3 boyutlu
+            yazıcı ile ürettim.<br /><br />
+            <strong>Analiz:</strong> ANSYS üzerinden malzeme dayanımı ve stres
+            analizleri gerçekleştirdim.<br /><br />
+            <strong>Güç Aktarımı:</strong> Şaft ve kayış-kasnak mekanizması
+            kullanarak güç aktarımı gerçekleştirdim.<br /><br />
+            <strong>Kontrol Sistemleri:</strong> AS5600 manyetik encoder ile
+            kapalı çevrim kontrol sistemi kurdum.<br /><br />
+            <strong>Yazılım:</strong> C dili ile PID kontrol algoritması
+            geliştirerek hassas pozisyon kontrolü elde ettim.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" data-reveal>
+      <div class="hero-actions" style="justify-content:center">
+        <a class="btn" href="index.html">← Ana Sayfaya Dön</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Seyit Ahmet Türksoy. Tüm hakları saklıdır.</p>
+      <div class="footer-links">
+        <a href="mailto:seyitahmett332@gmail.com">E-posta</a>
+        <a href="https://www.linkedin.com/in/seyitahmetturksoy" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
